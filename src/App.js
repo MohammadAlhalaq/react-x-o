@@ -12,7 +12,7 @@ function App() {
       <Squer /> 
       </div>
       
-      <div>game info</div>
+      <div className='winner'>game info</div>
     </div>
   );
 }
