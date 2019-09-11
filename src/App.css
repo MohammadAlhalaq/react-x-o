@@ -23,17 +23,33 @@
   color: #61dafb;
 }
 .button{
-  background: none;
   width: 4rem;
   height: 4rem;
+  border: #282c34 solid 1px;
+  line-height: 4rem;
+  text-align: center;
+  
+}
 
+.dis{
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #c7c7c7;
+}
+
+.button:disabled{
+  color: black;
+}
+.winner{
+text-align: center;
 }
 
 .board{
-  margin-top:30vh;
-  text-align: center;
+  margin: 0 auto;
+  margin-top:15vh;
+  justify-content: center;
   line-height: 100%;
-  
+  display: flex;
 }
 
 @keyframes App-logo-spin {
