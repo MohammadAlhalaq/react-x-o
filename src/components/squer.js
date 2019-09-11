@@ -1,7 +1,5 @@
 import React from 'react';
 import ChildButton from './childButton';
-import swal from 'sweetalert2';
-
 export default class Squer extends React.Component {
     state = {
         player: 'X',
@@ -41,17 +39,12 @@ export default class Squer extends React.Component {
         return <ChildButton howwin={this.state.win}  onClick={(cb) => this.onClick(i, cb)} player={this.state.player} />
     }
 
-    getWinner = () => {
-        swal.fire({
-            text: `Winner is ${this.state.win}`
-        })
-        return this.state.win
-    }
+
 
     render() {
         return (
         <div>
-                {this.state.win?<h1 className="winner">hey winner: {this.getWinner()}</h1>:''}
+                {this.state.win?<h1 className="winner">hey winner: {this.state.win}</h1>:''}
                 <h1 className="winner">player: {this.state.player}</h1>
             <div className="board">
                 <div className='board__line'>
