@@ -25,12 +25,46 @@
 .button{
   width: 4rem;
   height: 4rem;
-  border: #282c34 solid 1px;
+  border: #282c34 solid 5px;
   line-height: 4rem;
   text-align: center;
-  
+  border-radius:10%;
+  color: rgb(161, 127, 63);
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+.colorValue{
+  color: rgb(119, 53, 53);
+}
+.move{
+  width: 6rem;
+  height: 3rem;
+  border: #282c34 solid 0.25rem;
+  line-height: 3rem;
+  border-radius:10%;
+  cursor: pointer;
+  flex-direction: column;
+  margin : 0.5rem;  
+  text-align: center;
+  background-color: coral;
+}
+.move:first-child{
+  margin-top:0;
 }
 
+.restart{
+  width: 5rem;
+  height: 13.7rem;
+  margin-left: 0.5rem; 
+  background-color: coral;
+  border: #282c34 solid 0.25rem;
+  border-radius:10%;
+}
+
+.history{
+  width: 6rem;
+  margin-right: 1.6rem;
+}
 .dis{
   cursor: not-allowed;
   pointer-events: none;
@@ -42,14 +76,17 @@
 }
 .winner{
 text-align: center;
+margin-top: 5vh;
+height: 5rem;
 }
 
 .board{
   margin: 0 auto;
-  margin-top:15vh;
+  margin-top:5vh;
   justify-content: center;
   line-height: 100%;
   display: flex;
+  border-radius:10%;
 }
 
 @keyframes App-logo-spin {

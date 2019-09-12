@@ -8,7 +8,7 @@ export default ({howwin, value, onClick}) => {
         
     return (
         <div className={`button ${howwin ? 'dis' : value !== null ? 'dis' : ''}`} onClick={changevalue}>
-            {value}
+            <span className={value === "X"?'colorValue' :''}>{value}</span>
         </div>
     )
     
