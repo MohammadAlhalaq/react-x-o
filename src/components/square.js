@@ -53,17 +53,20 @@ export default class Square extends React.Component {
     addHistoryButton = () => {
         const buttons = this.state.history.map((item, index) => 
         {
-            if(index !== 0)return <button onClick={() => this.getmove(index)}> move to {index}</button>
+            if(index !== 0)return <div className='move' onClick={() => this.getmove(index)}> move to {index}</div>
+            return null;
         });
         return buttons;
     }
     render() {
         return (
         <div>
-            {this.state.win?<h2 className="winner">winner: {this.state.win}</h2>:''}
-            <h1 className="winner">player: {this.state.player}</h1>
-                {this.addHistoryButton()}
+            <div className="winner">
+            {this.state.win?<h2>winner: {this.state.win}</h2>:''}
+            <h1 >player: {this.state.player}</h1>
+            </div>
             <div className="board">
+            <div className="history">{this.addHistoryButton()}</div>
                 <div className='board__line'>
                     {this.squareRender(0)}
                     {this.squareRender(1)}
@@ -79,7 +82,7 @@ export default class Square extends React.Component {
                     {this.squareRender(7)}
                     {this.squareRender(8)}
                 </div>
-                <button className="" onClick={this.playAgain}>play again</button>
+                <button className="restart" onClick={this.playAgain}>play again</button>
             </div>
         </div>
         );
