@@ -1,6 +1,6 @@
 import React from 'react';
 import ChildButton from './childButton';
-export default class Squer extends React.Component {
+export default class Square extends React.Component {
     state = {
         player: 'X',
         result: Array(9).fill(null),
@@ -35,7 +35,7 @@ export default class Squer extends React.Component {
             this.winner();
         });
     }
-    squerRender(i) {
+    squareRender(i) {
         return <ChildButton value={this.state.result[i]} howwin={this.state.win}  onClick={() => this.onClick(i)} player={this.state.player} />
     }
     playAgain = () => {
@@ -49,19 +49,19 @@ export default class Squer extends React.Component {
             <h1 className="winner">player: {this.state.player}</h1>
             <div className="board">
                 <div className='board__line'>
-                    {this.squerRender(0)}
-                    {this.squerRender(1)}
-                    {this.squerRender(2)}
+                    {this.squareRender(0)}
+                    {this.squareRender(1)}
+                    {this.squareRender(2)}
                 </div>
                 <div className='board__line'>
-                    {this.squerRender(3)}
-                    {this.squerRender(4)}
-                    {this.squerRender(5)}
+                    {this.squareRender(3)}
+                    {this.squareRender(4)}
+                    {this.squareRender(5)}
                 </div>
                 <div className='board__line'>
-                    {this.squerRender(6)}
-                    {this.squerRender(7)}
-                    {this.squerRender(8)}
+                    {this.squareRender(6)}
+                    {this.squareRender(7)}
+                    {this.squareRender(8)}
                 </div>
                 <button className="" onClick={this.playAgain}>play again</button>
             </div>
