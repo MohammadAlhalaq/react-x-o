@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Squer from './components/squer'
+import Square from './components/square'
 
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <div>
-        <Squer /> 
+        <Square /> 
       </div>
     </div>
   );
