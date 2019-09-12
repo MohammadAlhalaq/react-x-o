@@ -9,10 +9,8 @@ function App() {
   return (
     <div>
       <div>
-      <Squer /> 
+        <Squer /> 
       </div>
-      
-      <div className='winner'>game info</div>
     </div>
   );
 }
