@@ -1,16 +1,11 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import Square from './components/square'
-
-
+import Square from './components/square';
 
 function App() {
   return (
     <div>
-      <div>
-        <Square /> 
-      </div>
+      <Square />
     </div>
   );
 }
