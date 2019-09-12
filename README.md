@@ -15,7 +15,7 @@ Simple Tic-Tac-Toe Game by using React .
  - as a user i can play with my friend by click in the board and complete the pattern to win :)
 
 ## Our Idea
-    simple game that show board in it , you can play with any one, just between two players.
+ simple game that show board in it , you can play with any one, just between two players.
 	
 
 ## Our Steps
