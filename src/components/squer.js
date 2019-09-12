@@ -4,6 +4,7 @@ export default class Squer extends React.Component {
     state = {
         player: 'X',
         result: Array(9).fill(null),
+        histo:null,
         win: null,
     }
     winner = () => {
@@ -17,35 +18,35 @@ export default class Squer extends React.Component {
             [2, 5, 8],
             [0, 4, 8],
             [2, 4, 6],
-        ];
-        for(let i=0 ;i<list.length;i++){
-            const [a, b, c] = list[i];
+        ]; 
+        list.forEach((ele) => {
+            const [a, b, c] = ele;
             if (result[a] && result[a] === result[b] && result[b] === result[c]){
                 this.setState({ win: result[a]});
                 return ;
             }
-        }  
+        })
         return null;  
     }
-    onClick = (i, cb) => {
+    onClick = (i) => {
         const clonedArray = this.state.result.slice();
         clonedArray[i] = this.state.player;
         this.setState(prevState =>({player: prevState.player === "X" ? "O" : "X", result: clonedArray}), () => {
             this.winner();
         });
     }
-
     squerRender(i) {
-        return <ChildButton howwin={this.state.win}  onClick={(cb) => this.onClick(i, cb)} player={this.state.player} />
+        return <ChildButton value={this.state.result[i]} howwin={this.state.win}  onClick={() => this.onClick(i)} player={this.state.player} />
     }
-
-
+    playAgain = () => {
+        this.setState({player: 'X', result: Array(9).fill(null), win: null,})
+    }
 
     render() {
         return (
         <div>
-                {this.state.win?<h1 className="winner">hey winner: {this.state.win}</h1>:''}
-                <h1 className="winner">player: {this.state.player}</h1>
+            {this.state.win?<h1 className="winner">hey winner: {this.state.win}</h1>:''}
+            <h1 className="winner">player: {this.state.player}</h1>
             <div className="board">
                 <div className='board__line'>
                     {this.squerRender(0)}
@@ -62,8 +63,7 @@ export default class Squer extends React.Component {
                     {this.squerRender(7)}
                     {this.squerRender(8)}
                 </div>
-
-                {/* <button className="button" onClick={()=>this.setState({})}>play again</button> */}
+                <button className="" onClick={this.playAgain}>play again</button>
             </div>
         </div>
         );
