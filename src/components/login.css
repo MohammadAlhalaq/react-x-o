@@ -1,0 +1,25 @@
+.form-name{
+  margin: 10vh auto;
+  text-align: center;
+  margin: 10 auto;
+}
+.name{
+  padding:1.7rem;
+  border-radius: .7rem;
+  margin: .4rem;
+  border: #282c34 solid 0.25rem;
+}
+.login{
+  padding: 1.7rem;
+  border-radius: .7rem;
+  background: coral;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  outline: none;
+}
+.div{
+  margin: 4.7rem auto;
+  text-align: center;
+  margin-left: 6.7rem;
+}

@@ -23,6 +23,7 @@ export default class Square extends React.Component {
             const [a, b, c] = ele;
             if (result[a] && result[a] === result[b] && result[b] === result[c]){
                 this.setState({ win: result[a]});
+                this.props.resultV(result[a]);
                 return ;
             }
         })
@@ -62,8 +63,8 @@ export default class Square extends React.Component {
         return (
         <div>
             <div className="winner">
-            {this.state.win?<h2>winner: {this.state.win}</h2>:''}
-            <h1 >player: {this.state.player}</h1>
+            {this.state.win?<h2>winner: {this.props.names[this.state.win]} : {this.props.names.value[this.state.win]}</h2>:''}
+            {!this.state.win?<h1 >player: {this.props.names[this.state.player]} </h1>:''}
             </div>
             <div className="board">
             <div className="history">{this.addHistoryButton()}</div>
@@ -83,6 +84,9 @@ export default class Square extends React.Component {
                     {this.squareRender(8)}
                 </div>
                 <button className="restart" onClick={this.playAgain}>play again</button>
+                {/* <button className="restart" onClick={this.playAgain}>play again</button> */}
+                <button className='restart' onClick={this.props.logout} >logout</button>
+                
             </div>
         </div>
         );

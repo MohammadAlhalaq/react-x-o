@@ -60,6 +60,7 @@
   border: #282c34 solid 0.25rem;
   border-radius:10%;
   outline: none;
+  margin: .4rem;
 }
 
 .history{
